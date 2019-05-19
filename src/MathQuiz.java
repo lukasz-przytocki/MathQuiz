@@ -1,23 +1,24 @@
 import java.util.Scanner;
 public class MathQuiz {
-    private int counter=0;
-    public void mathQuiz(){
+    Scanner scanner = new Scanner(System.in);
 
+    public void mathQuiz(){
+        int counter=0;
         System.out.println("Proszę o rozwiązanie 3 zadań ");
 
-        if(question1()==true){
+        if(question1()){
             counter++;
             System.out.println("Prawidłowa odpowiedź");
         }else{
             System.out.println("Nieprawidłowa odpowiedź");
         }
-        if(question2()==true){
+        if(question2()){
             counter++;
             System.out.println("Prawidłowa odpowiedź");
         }else{
             System.out.println("Nieprawidłowa odpowiedź");
         }
-        if(question3()==true){
+        if(question3()){
             counter++;
             System.out.println("Prawidłowa odpowiedź");
         }else{
@@ -55,7 +56,6 @@ public class MathQuiz {
     }
     private boolean question3(){
         int pierwiastek;
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Jaki jest pierwiastek z liczby 15129 ?");
         pierwiastek = scanner.nextInt();
 
